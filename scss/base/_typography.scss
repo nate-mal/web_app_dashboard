@@ -4,24 +4,18 @@
 
 /* ===========Header==================== */
 
-%headline {
-  font-weight: map-get($map: $font, $key: weight-thin);
-}
-
 .headline {
   &-primary {
-    @extend %headline;
+    font-weight: map-get($map: $font, $key: weight-regular);
     font-size: 1.5em;
+    sup {
+      font-size: 0.5em;
+    }
   }
   &-profile-name {
-    @extend %headline;
+    font-weight: map-get($map: $font, $key: weight-thin);
     font-size: 1em;
   }
-}
-
-.headline-secondary {
-  font-weight: map-get($map: $font, $key: weight-thin);
-  color: map-get($map: $theme-colours, $key: font-primary);
 }
 
 /* ============================================= */

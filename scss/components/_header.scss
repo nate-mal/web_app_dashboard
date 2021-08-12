@@ -4,14 +4,26 @@
 header {
   @include flexy() {
     align-items: center;
+    background-color: map-get($map: $theme-colours, $key: col-header);
   }
   & * {
     color: map-get($map: $theme-colours, $key: col-14);
   }
-  & > *:not(small) {
-    margin: 0 10px 0;
+  & > *:not(sup) {
+    margin: 0 5px 0;
   }
   & h1:first-child {
     margin-right: auto;
+  }
+
+  .avatar {
+    width: 35px;
+    height: auto;
+    border-radius: 50%;
+  }
+  .notifications-bell {
+    padding: 5px;
+    border-right: solid 0.6px;
+    border-color: darken(map-get($theme-colours, col-14), 40%);
   }
 }

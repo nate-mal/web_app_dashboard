@@ -1,5 +1,5 @@
 @use "sass:map";
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
 /* ============================================= */
 /*              Variable                       */
 /* ============================================= */
@@ -31,7 +31,7 @@ $theme-colours: (
   //header
   "col-14": #fff,
   //inUse
-  //,,
+  //,,,,,,,,
 );
 
 /*              BUttons                       */
@@ -70,9 +70,10 @@ $font: (
   "color-primary": #000,
   "line-height-primary": 1.45em,
   "weight-thin": 300,
+  "weight-regular": 400,
   "weight-bold": 700,
   "family-primary": (
-    "Lato",
+    "Open Sans",
     sans-serif,
   ),
 );

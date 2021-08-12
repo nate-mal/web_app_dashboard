@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
 /* ============================================= */
 /*              Variable                       */
 /* ============================================= */
@@ -359,7 +360,7 @@ template {
 /*              Base styles                      */
 /* ============================================= */
 * {
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #000;
   box-sizing: border-box;
 }
@@ -381,19 +382,16 @@ svg {
 /*              Typography                       */
 /* ============================================= */
 /* ===========Header==================== */
-.headline-profile-name, .headline-primary {
-  font-weight: 300;
-}
-
 .headline-primary {
+  font-weight: 400;
   font-size: 1.5em;
 }
-.headline-profile-name {
-  font-size: 1em;
+.headline-primary sup {
+  font-size: 0.5em;
 }
-
-.headline-secondary {
+.headline-profile-name {
   font-weight: 300;
+  font-size: 1em;
 }
 
 /* ============================================= */
@@ -574,15 +572,26 @@ header {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  background-color: #7477bf;
 }
 header * {
   color: #fff;
 }
-header > *:not(small) {
-  margin: 0 10px 0;
+header > *:not(sup) {
+  margin: 0 5px 0;
 }
 header h1:first-child {
   margin-right: auto;
+}
+header .avatar {
+  width: 35px;
+  height: auto;
+  border-radius: 50%;
+}
+header .notifications-bell {
+  padding: 5px;
+  border-right: solid 0.6px;
+  border-color: #999999;
 }
 
 /* ============================================= */
