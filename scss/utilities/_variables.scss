@@ -31,7 +31,12 @@ $theme-colours: (
   //header
   "col-14": #fff,
   //inUse
-  //,,,,,,,,
+  //,,,,,,,,,,,,,,,,,,,,
+);
+$black-filters: (
+  "white": invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg)
+    brightness(103%) contrast(103%),
+  // takes a dark base color and retrive white;
 );
 
 /*              BUttons                       */

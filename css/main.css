@@ -529,16 +529,15 @@ svg {
 .wrapper {
   display: grid;
   min-height: 100vh;
-  grid-template-rows: 50px 30px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 65px 50px 1fr;
   grid-template-areas: "header" "nav" "main";
 }
 .wrapper header {
   grid-area: header;
-  background-color: #7477bf;
 }
 .wrapper nav {
   grid-area: nav;
-  background-color: #4d4c72;
 }
 .wrapper main {
   grid-area: main;
@@ -597,36 +596,36 @@ header .notifications-bell {
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
-.nav {
+.main-nav {
+  background-color: #4d4c72;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
-  flex-basis: 100%;
-  padding-left: 0;
+  align-items: center;
+  justify-content: center;
 }
-@media screen and (min-width: 768px) {
-  .nav {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
+.main-nav > * {
+  width: 30px;
+  height: 30px;
+  margin: 0 15px 0;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg) brightness(103%) contrast(103%);
+  background-repeat: no-repeat;
 }
-.nav-link {
-  text-align: center;
-  border-radius: 5px;
-  padding: 10px 0;
-  display: block;
-  width: 100%;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+#home {
+  background: url(../img/svgs/home.svg);
 }
-@media screen and (min-width: 768px) {
-  .nav-link {
-    flex-basis: 100px;
-  }
+
+#bar-chart {
+  background: url(../img/svgs/bar-chart.svg);
 }
-.nav-link:hover {
-  color: #fff;
-  background-color: #58e1c1;
+
+#members {
+  background: url(../img/svgs/members.svg);
+}
+
+#settings {
+  background: url(../img/svgs/settings.svg);
 }
 
 /* ============================================= */

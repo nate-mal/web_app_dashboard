@@ -7,20 +7,15 @@
 
 .wrapper {
   display: grid;
-  // grid-template-columns: 1fr;
   min-height: 100vh;
-  grid-template-rows: 50px 30px 1fr;
-  grid-template-areas:
-    "header"
-    "nav"
-    "main";
+  grid-template-columns: 1fr;
+  grid-template-rows: 65px 50px 1fr;
+  grid-template-areas: "header" "nav" "main";
   & header {
     grid-area: header;
-    background-color: map-get($map: $theme-colours, $key: col-header);
   }
   & nav {
     grid-area: nav;
-    background-color: map-get($map: $theme-colours, $key: col-nav);
   }
   & main {
     grid-area: main;
