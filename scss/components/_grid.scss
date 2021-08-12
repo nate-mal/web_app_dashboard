@@ -1,0 +1,29 @@
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+@use "sass:list";
+@use "sass:map";
+@import "extends.scss";
+
+.wrapper {
+  display: grid;
+  // grid-template-columns: 1fr;
+  min-height: 100vh;
+  grid-template-rows: 30px 30px auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main";
+  & header {
+    grid-area: header;
+    background-color: steelblue;
+  }
+  & nav {
+    grid-area: nav;
+    background-color: brown;
+  }
+  & main {
+    grid-area: main;
+    background-color: tomato;
+  }
+}

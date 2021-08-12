@@ -1,0 +1,29 @@
+/* ============================================= */
+  /*              Typography                       */
+  /* ============================================= */
+  
+  .headline-primary {
+    color: map-get($theme-colours,col-13);
+    margin-left: 10px;
+  }
+  
+  .headline-secondary {
+    font-weight: map-get($map: $font, $key: weight-thin);
+    color: map-get($map: $theme-colours, $key: font-primary);
+  }
+  
+  .link {
+    color: map-get($map: $theme-colours, $key: col-11);
+    font-weight: map-get($map: $font, $key: weight-bold);
+  }
+  
+  .blockquote {
+    font-size: 1.5em;
+    font-weight: map-get($map: $font, $key:weight-thin);
+    font-style: italic;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 8px solid map-get($map: $theme-colours, $key: col-13);
+    border-radius: 5px;
+  }
+  

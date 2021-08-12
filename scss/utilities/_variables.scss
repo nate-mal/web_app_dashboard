@@ -1,0 +1,61 @@
+@use "sass:map";
+
+/* ============================================= */
+  /*              Variable                       */
+  /* ============================================= */
+
+
+
+  /*              Colours                       */
+
+
+
+
+  $theme-colours: (
+    'col-1': #927bc1,//info for buttons
+    'col-2': #fd7856,//warning for buttons
+    'col-3': #deb2ee,
+    'col-4': #7ee6fd,
+    'col-5': #88d9a0,
+    'col-6': #4da2bb,
+    'col-7': #ec9fa3,
+    'col-8': #fd9f85,
+    'col-9': #e4757a,// error for buttons
+    'col-10': #63cc82,//sucsess for buttons
+    'col-11': #51ddfc,
+    'col-12': #80e8d1,
+    'col-13':#58e1c1,//form border, nav on hover
+    'col-14': #fff,//
+  );
+
+  /*              BUttons                       */
+ 
+    $button-colours : (
+      'default': map-get($map: $theme-colours, $key:col-11 ),
+      'error' : map-get($map: $theme-colours, $key:col-9 ),
+      'info' : map-get($map: $theme-colours, $key:col-1 ),
+      'success' : map-get($map: $theme-colours, $key:col-10 ),
+      'warning' : map-get($map: $theme-colours, $key:col-2 ),
+
+    );
+
+
+
+
+  /*              Fonts                       */
+
+
+  $font : (
+     
+      'color-primary': #777,
+      'line-height-primary': 1.45em,
+      'weight-thin' : 300,
+      'weight-bold': 700,  
+      'family-primary': ('Lato', sans-serif),
+      );
+
+
+      $breakpoints : (
+      's':768px,
+
+      );// I've used a map aprouch instead to a simple variable to be a lot more easy to add other breakpoints if needed 

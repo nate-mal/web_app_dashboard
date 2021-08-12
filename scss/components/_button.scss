@@ -1,0 +1,36 @@
+/* ============================================= */
+  /*              Buttons                          */
+  /* ============================================= */
+  
+  .btn {
+    margin-top: 15px;
+    width: 100%;
+    color: map-get($map: $theme-colours, $key:col-14);
+    border: none;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    @include mq(s) {
+      padding: 10px 30px;
+      & + & {
+        margin-left: 10px;
+      }
+    }
+    
+  }
+  
+@each $state, $color in $button-colours {
+
+  .#{$state} {
+    background-color: $color;
+    &:hover {
+      transition: background-color .3s ease-in-out;
+      background-color: lighten($color,15%);
+    }
+  }
+}
+
+
+
+

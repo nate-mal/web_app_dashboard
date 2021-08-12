@@ -1,0 +1,18 @@
+/* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+
+* {
+    font-family: map-get($map: $font, $key: family-primary );
+    color: map-get($font, color-primary);
+    box-sizing: border-box;
+  }
+  
+  p {
+    line-height: map-get($map: $font, $key: line-height-primary);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
