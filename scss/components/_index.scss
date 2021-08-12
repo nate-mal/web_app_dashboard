@@ -1,12 +1,6 @@
-
 // -----------------------------------------------------------------------------
 // This file imports all components,  objects who share semantic meaning and style, "OOP css",;
 // ---------------------------
 
-@import 'containers.scss',
-        'images.scss',
-       'button.scss',
-        'grid.scss',
-        'forms.scss',
-        'navigation.scss';
-        
+@import "containers.scss", "images.scss", "button.scss", "grid.scss",
+  "forms.scss", "header.scss", "navigation.scss";

@@ -9,21 +9,21 @@
   display: grid;
   // grid-template-columns: 1fr;
   min-height: 100vh;
-  grid-template-rows: 30px 30px auto;
+  grid-template-rows: 50px 30px 1fr;
   grid-template-areas:
     "header"
     "nav"
     "main";
   & header {
     grid-area: header;
-    background-color: steelblue;
+    background-color: map-get($map: $theme-colours, $key: col-header);
   }
   & nav {
     grid-area: nav;
-    background-color: brown;
+    background-color: map-get($map: $theme-colours, $key: col-nav);
   }
   & main {
     grid-area: main;
-    background-color: tomato;
+    background-color: none;
   }
 }

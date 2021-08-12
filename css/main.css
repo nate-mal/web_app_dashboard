@@ -360,7 +360,7 @@ template {
 /* ============================================= */
 * {
   font-family: "Lato", sans-serif;
-  color: #777;
+  color: #000;
   box-sizing: border-box;
 }
 
@@ -372,18 +372,31 @@ a {
   text-decoration: none;
 }
 
+svg {
+  width: 25px;
+  height: 25px;
+}
+
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
+/* ===========Header==================== */
+.headline-profile-name, .headline-primary {
+  font-weight: 300;
+}
+
 .headline-primary {
-  color: #58e1c1;
-  margin-left: 10px;
+  font-size: 1.5em;
+}
+.headline-profile-name {
+  font-size: 1em;
 }
 
 .headline-secondary {
   font-weight: 300;
 }
 
+/* ============================================= */
 .link {
   color: #51ddfc;
   font-weight: 700;
@@ -518,20 +531,20 @@ a {
 .wrapper {
   display: grid;
   min-height: 100vh;
-  grid-template-rows: 30px 30px auto;
+  grid-template-rows: 50px 30px 1fr;
   grid-template-areas: "header" "nav" "main";
 }
 .wrapper header {
   grid-area: header;
-  background-color: steelblue;
+  background-color: #7477bf;
 }
 .wrapper nav {
   grid-area: nav;
-  background-color: brown;
+  background-color: #4d4c72;
 }
 .wrapper main {
   grid-area: main;
-  background-color: tomato;
+  background-color: none;
 }
 
 /* ============================================= */
@@ -551,6 +564,25 @@ a {
   padding: 10px;
   border: none;
   border-bottom: 5px solid #58e1c1;
+}
+
+/* ============================================= */
+/*             Header                   */
+/* ============================================= */
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+header * {
+  color: #fff;
+}
+header > *:not(small) {
+  margin: 0 10px 0;
+}
+header h1:first-child {
+  margin-right: auto;
 }
 
 /* ============================================= */

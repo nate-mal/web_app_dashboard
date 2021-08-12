@@ -1,0 +1,17 @@
+/* ============================================= */
+/*             Header                   */
+/* ============================================= */
+header {
+  @include flexy() {
+    align-items: center;
+  }
+  & * {
+    color: map-get($map: $theme-colours, $key: col-14);
+  }
+  & > *:not(small) {
+    margin: 0 10px 0;
+  }
+  & h1:first-child {
+    margin-right: auto;
+  }
+}
