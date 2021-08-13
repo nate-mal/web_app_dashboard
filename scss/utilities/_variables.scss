@@ -24,14 +24,13 @@ $theme-colours: (
   "col-9": #e4757a,
   // error for buttons
   "col-10": #63cc82,
-  //sucsess for buttons
+  //color for btn buttons
   "col-11": #51ddfc,
   "col-12": #80e8d1,
   "col-13": #58e1c1,
-  //header
   "col-14": #fff,
   //inUse
-  //,,,,,,,,,,,,,,,,,,,,,,
+  //,,,,,,,,,,,,,,,,,,,,,,,,
 );
 $black-filters: (
   "white": invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg)

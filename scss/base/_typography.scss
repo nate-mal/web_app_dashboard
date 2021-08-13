@@ -16,6 +16,10 @@
     font-weight: map-get($map: $font, $key: weight-thin);
     font-size: 1em;
   }
+  &-secondary {
+    font-weight: map-get($map: $font, $key: weight-bold);
+    font-size: 1em;
+  }
 }
 
 /* ============================================= */

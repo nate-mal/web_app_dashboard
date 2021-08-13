@@ -1,20 +1,13 @@
 /* ============================================= */
-  /*             Containers                  */
-  /* ============================================= */
+/*             Containers                  */
+/* ============================================= */
 
-
-  .container {
-    padding: 0 10px;
-    @include mq(s) {
-      @include center(1400px);
-    }
+.container {
+  padding: 0 10px;
+  @include mq(s) {
+    @include center(1400px);
   }
-  .card {
-    flex-basis: 100%;
-  }
-  
-
-  
-  
-  
-  
+}
+.card {
+  flex-basis: 100%;
+}

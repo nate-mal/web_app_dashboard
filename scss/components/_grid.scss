@@ -37,6 +37,7 @@
   @include mq("s") {
     grid-template-columns: 50%;
     .main-header,
+    .alert,
     .traffic,
     .social {
       grid-column: 1 / span 2;
