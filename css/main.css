@@ -430,38 +430,6 @@ svg {
 }
 
 /* ============================================= */
-/*              Images                           */
-/* ============================================= */
-[class|=img] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-}
-
-.img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-}
-.img-avatar {
-  margin-top: 10px;
-  max-height: 100%;
-}
-.img-frame {
-  margin-top: 10px;
-  padding: 13px;
-  border: 1px solid #ccc;
-}
-@media screen and (min-width: 768px) {
-  .img-logo {
-    margin-left: initial;
-    margin-right: initial;
-  }
-}
-
-/* ============================================= */
 /*              Buttons                          */
 /* ============================================= */
 .btn {
@@ -524,24 +492,40 @@ svg {
 }
 
 /* ============================================= */
-/*              Grid System                      */
+/*              Grid Systems                      */
 /* ============================================= */
-.wrapper {
+/* ==============Main grid system================== */
+.grid-wrapper-principal {
   display: grid;
   min-height: 100vh;
   grid-template-columns: 1fr;
   grid-template-rows: 65px 50px 1fr;
   grid-template-areas: "header" "nav" "main";
 }
-.wrapper header {
+.grid-wrapper-principal header {
   grid-area: header;
 }
-.wrapper nav {
+.grid-wrapper-principal nav {
   grid-area: nav;
 }
-.wrapper main {
+.grid-wrapper-principal main {
   grid-area: main;
   background-color: none;
+}
+
+/* ============================================= */
+/* ===============Grid system inside main section================ */
+.grid-wrapper-secondary {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 65px 50px;
+  grid-template-areas: "header" "alert";
+}
+.grid-wrapper-secondary .main-header {
+  grid-area: header;
+}
+.grid-wrapper-secondary .alert {
+  grid-area: alert;
 }
 
 /* ============================================= */
@@ -626,6 +610,22 @@ header .notifications-bell {
 
 #settings {
   background: url(../img/svgs/settings.svg);
+}
+
+/* ============================================= */
+/*             Main Content of the page                   */
+/* ============================================= */
+/* ==============Main header================ */
+.main-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.main-header .headline-secondary {
+  padding: 5px;
+  color: inherit;
 }
 
 /* ============================================= */

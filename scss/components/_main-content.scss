@@ -1,0 +1,16 @@
+/* ============================================= */
+/*             Main Content of the page                   */
+/* ============================================= */
+
+/* ==============Main header================ */
+
+.main-header {
+  @include flexy() {
+    align-items: center;
+    justify-content: space-around;
+  }
+  .headline-secondary {
+    padding: 5px;
+    color: inherit;
+  }
+}

@@ -1,11 +1,11 @@
 /* ============================================= */
-/*              Grid System                      */
+/*              Grid Systems                      */
 /* ============================================= */
 @use "sass:list";
 @use "sass:map";
 @import "extends.scss";
-
-.wrapper {
+/* ==============Main grid system================== */
+.grid-wrapper-principal {
   display: grid;
   min-height: 100vh;
   grid-template-columns: 1fr;
@@ -20,5 +20,22 @@
   & main {
     grid-area: main;
     background-color: none;
+  }
+}
+/* ============================================= */
+
+/* ===============Grid system inside main section================ */
+
+.grid-wrapper-secondary {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 65px 50px;
+  grid-template-areas: "header" "alert";
+
+  & .main-header {
+    grid-area: header;
+  }
+  & .alert {
+    grid-area: alert;
   }
 }
