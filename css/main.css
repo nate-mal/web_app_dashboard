@@ -512,7 +512,7 @@ svg {
   grid-area: main;
   background-color: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .grid-wrapper-principal {
     grid-template-columns: 55px 1fr;
     grid-template-areas: "header header" "nav main";
@@ -521,17 +521,28 @@ svg {
 
 /* ============================================= */
 /* ===============Grid system inside main section================ */
-.grid-wrapper-secondary {
+.grid-wrapper-main-content {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 65px 50px;
-  grid-template-areas: "header" "alert";
 }
-.grid-wrapper-secondary .main-header {
-  grid-area: header;
-}
-.grid-wrapper-secondary .alert {
-  grid-area: alert;
+@media screen and (min-width: 768px) {
+  .grid-wrapper-main-content {
+    grid-template-columns: 50%;
+  }
+  .grid-wrapper-main-content .main-header,
+.grid-wrapper-main-content .traffic,
+.grid-wrapper-main-content .social {
+    grid-column: 1/span 2;
+  }
+  .grid-wrapper-main-content .daily,
+.grid-wrapper-main-content .members,
+.grid-wrapper-main-content .message {
+    grid-column: 1/span 1;
+  }
+  .grid-wrapper-main-content .mobile,
+.grid-wrapper-main-content .activity,
+.grid-wrapper-main-content .settings {
+    grid-column: 2/span 1;
+  }
 }
 
 /* ============================================= */
@@ -596,13 +607,13 @@ header .notifications-bell {
   align-items: center;
   justify-content: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .main-nav {
     height: 100%;
     width: 55px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .main-nav {
     flex-direction: column;
     justify-content: start;

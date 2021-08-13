@@ -5,7 +5,7 @@
 .main-nav {
   // Set nav size both mobile and wide screens
   height: 55px;
-  @include mq("m") {
+  @include mq("s") {
     height: 100%;
     width: 55px;
   }
@@ -13,7 +13,7 @@
   @include flexy() {
     align-items: center;
     justify-content: center;
-    @include mq("m") {
+    @include mq("s") {
       flex-direction: column;
       justify-content: start;
     }
