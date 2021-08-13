@@ -1,9 +1,11 @@
-
-
- %theme {
-    margin-top: 10px;
-    flex-basis: 100%;
-    min-height: 25px;
-    padding: 10px;
-    border-radius: 5px;
-  }
+%theme {
+  margin-top: 10px;
+  flex-basis: 100%;
+  min-height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.card {
+  background-color: darken(#fff, 10%);
+  border-radius: 10px;
+}

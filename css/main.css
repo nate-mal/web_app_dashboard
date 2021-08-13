@@ -378,6 +378,10 @@ svg {
   height: 25px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
@@ -429,8 +433,10 @@ svg {
   }
 }
 
-.card {
-  flex-basis: 100%;
+.card, .social-container {
+  background-color: lightslategray;
+  padding: 5px;
+  border-radius: 15px;
 }
 
 /* ============================================= */
@@ -438,51 +444,13 @@ svg {
 /* ============================================= */
 .btn, .alert-banner {
   list-style: none;
-  color: #fff;
-  padding: 5px 10px;
+  padding: 10px;
   margin: 0 5px;
-  border-radius: 15px;
+  border-radius: 20px;
+}
+.btn-selected {
   background-color: #63cc82;
-}
-
-.default {
-  background-color: #51ddfc;
-}
-.default:hover {
-  transition: background-color 0.3s ease-in-out;
-  background-color: #9cecfd;
-}
-
-.error {
-  background-color: #e4757a;
-}
-.error:hover {
-  transition: background-color 0.3s ease-in-out;
-  background-color: #f1b5b8;
-}
-
-.info {
-  background-color: #927bc1;
-}
-.info:hover {
-  transition: background-color 0.3s ease-in-out;
-  background-color: #bdafd9;
-}
-
-.success {
-  background-color: #63cc82;
-}
-.success:hover {
-  transition: background-color 0.3s ease-in-out;
-  background-color: #9ddfb0;
-}
-
-.warning {
-  background-color: #fd7856;
-}
-.warning:hover {
-  transition: background-color 0.3s ease-in-out;
-  background-color: #feb4a2;
+  color: #fff;
 }
 
 /* ============================================= */
@@ -495,6 +463,7 @@ svg {
   justify-content: space-between;
   padding: 0 10px;
   background-color: #7477bf;
+  color: #fff;
 }
 .alert-banner * {
   color: inherit;
@@ -503,9 +472,27 @@ svg {
   cursor: pointer;
 }
 
+#back-home {
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 3em;
+  padding: 15px;
+  border-radius: 50%;
+  background: #7477bf;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
 /* ============================================= */
 /*              Grid Systems                      */
 /* ============================================= */
+.card, .social-container {
+  background-color: #e6e6e6;
+  border-radius: 10px;
+}
+
 /* ==============Main grid system================== */
 .grid-wrapper-principal {
   display: grid;
@@ -655,6 +642,10 @@ header .notifications-bell {
   background: url(../img/svgs/settings.svg) no-repeat;
 }
 
+.home {
+  background: url(../img/svgs/home.svg) no-repeat;
+}
+
 /* ============================================= */
 /*             Main Content of the page                   */
 /* ============================================= */
@@ -701,15 +692,53 @@ header .notifications-bell {
 }
 
 .widget-container-full {
-  min-width: 90vw;
+  max-width: 90vw;
 }
 .widget-container-half {
-  min-width: 90vw;
+  max-width: 90vw;
 }
 @media screen and (min-width: 768px) {
   .widget-container-half {
-    min-width: 85vw;
+    max-width: 45vw;
   }
+}
+
+.wrapper-social-containers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.social-container {
+  flex: 1;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  color: #7477bf;
+}
+.social-container * {
+  color: inherit;
+  margin: 10px;
+}
+.social-container .social-text > * {
+  margin: 0;
+}
+.social-container .social-text > *:last-child {
+  color: gray;
+  font-size: 2em;
+}
+
+.social-image {
+  background-color: currentColor;
+  padding: 3px;
+  border-radius: 50%;
+}
+.social-image * {
+  fill: white;
 }
 
 /* ============================================= */

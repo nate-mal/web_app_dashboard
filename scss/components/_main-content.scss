@@ -45,12 +45,50 @@
 
 .widget-container {
   &-full {
-    min-width: 90vw;
+    max-width: 90vw;
   }
   &-half {
-    min-width: 90vw;
+    max-width: 90vw;
     @include mq("s") {
-      min-width: 85vw;
+      max-width: 45vw;
     }
+  }
+}
+
+// Social containers
+.wrapper-social-containers {
+  @include flexy() {
+    justify-content: space-evenly;
+  }
+}
+.social-container {
+  @extend .card;
+  flex: 1;
+  margin: 0 10px;
+  @include flexy() {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  color: map-get($map: $theme-colours, $key: col-header);
+  * {
+    color: inherit;
+    margin: 10px;
+  }
+  .social-text {
+    > * {
+      margin: 0;
+    }
+    > *:last-child {
+      color: gray;
+      font-size: 2em;
+    }
+  }
+}
+.social-image {
+  background-color: currentColor;
+  padding: 3px;
+  border-radius: 50%;
+  * {
+    fill: white;
   }
 }
