@@ -31,7 +31,7 @@ $theme-colours: (
   //header
   "col-14": #fff,
   //inUse
-  //,,,,,,,,,,,,,,,,,,,,
+  //,,,,,,,,,,,,,,,,,,,,,,
 );
 $black-filters: (
   "white": invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg)
@@ -85,4 +85,5 @@ $font: (
 
 $breakpoints: (
   "s": 768px,
+  "m": 1024px,
 ); // I've used a map aprouch instead to a simple variable to be a lot more easy to add other breakpoints if needed

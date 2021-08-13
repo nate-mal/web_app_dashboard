@@ -2,6 +2,7 @@
 /*             Header                   */
 /* ============================================= */
 header {
+  height: 65px;
   @include flexy() {
     align-items: center;
     background-color: map-get($map: $theme-colours, $key: col-header);

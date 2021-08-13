@@ -498,8 +498,8 @@ svg {
 .grid-wrapper-principal {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: 65px 50px 1fr;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
   grid-template-areas: "header" "nav" "main";
 }
 .grid-wrapper-principal header {
@@ -511,6 +511,12 @@ svg {
 .grid-wrapper-principal main {
   grid-area: main;
   background-color: none;
+}
+@media screen and (min-width: 1024px) {
+  .grid-wrapper-principal {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas: "header header" "nav main";
+  }
 }
 
 /* ============================================= */
@@ -551,6 +557,7 @@ svg {
 /*             Header                   */
 /* ============================================= */
 header {
+  height: 65px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -581,6 +588,7 @@ header .notifications-bell {
 /*              Navigation                       */
 /* ============================================= */
 .main-nav {
+  height: 55px;
   background-color: #4d4c72;
   display: flex;
   flex-direction: row;
@@ -588,28 +596,39 @@ header .notifications-bell {
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 1024px) {
+  .main-nav {
+    height: 100%;
+    width: 55px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-nav {
+    flex-direction: column;
+    justify-content: start;
+  }
+}
 .main-nav > * {
   width: 30px;
   height: 30px;
-  margin: 0 15px 0;
+  margin: 15px;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg) brightness(103%) contrast(103%);
-  background-repeat: no-repeat;
 }
 
 #home {
-  background: url(../img/svgs/home.svg);
+  background: url(../img/svgs/home.svg) no-repeat;
 }
 
 #bar-chart {
-  background: url(../img/svgs/bar-chart.svg);
+  background: url(../img/svgs/bar-chart.svg) no-repeat;
 }
 
 #members {
-  background: url(../img/svgs/members.svg);
+  background: url(../img/svgs/members.svg) no-repeat;
 }
 
 #settings {
-  background: url(../img/svgs/settings.svg);
+  background: url(../img/svgs/settings.svg) no-repeat;
 }
 
 /* ============================================= */
@@ -625,7 +644,6 @@ header .notifications-bell {
 }
 .main-header .headline-secondary {
   padding: 5px;
-  color: inherit;
 }
 
 /* ============================================= */

@@ -3,29 +3,38 @@
 /* ============================================= */
 @use "sass:map";
 .main-nav {
+  // Set nav size both mobile and wide screens
+  height: 55px;
+  @include mq("m") {
+    height: 100%;
+    width: 55px;
+  }
   background-color: map-get($map: $theme-colours, $key: col-nav);
   @include flexy() {
     align-items: center;
     justify-content: center;
+    @include mq("m") {
+      flex-direction: column;
+      justify-content: start;
+    }
   }
 
   & > * {
     width: 30px;
     height: 30px;
-    margin: 0 15px 0;
+    margin: 15px;
     filter: map-get($map: $black-filters, $key: "white");
-    background-repeat: no-repeat;
   }
 }
 #home {
-  background: url(../img/svgs/home.svg);
+  background: url(../img/svgs/home.svg) no-repeat;
 }
 #bar-chart {
-  background: url(../img/svgs/bar-chart.svg);
+  background: url(../img/svgs/bar-chart.svg) no-repeat;
 }
 #members {
-  background: url(../img/svgs/members.svg);
+  background: url(../img/svgs/members.svg) no-repeat;
 }
 #settings {
-  background: url(../img/svgs/settings.svg);
+  background: url(../img/svgs/settings.svg) no-repeat;
 }
