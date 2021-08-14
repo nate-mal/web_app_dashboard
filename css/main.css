@@ -433,12 +433,6 @@ html {
   }
 }
 
-.card, .social-container {
-  background-color: lightslategray;
-  padding: 5px;
-  border-radius: 15px;
-}
-
 /* ============================================= */
 /*              Buttons                          */
 /* ============================================= */
@@ -470,19 +464,6 @@ html {
 }
 .alert-banner-close {
   cursor: pointer;
-}
-
-#back-home {
-  width: 50px;
-  height: 50px;
-  color: white;
-  font-size: 3em;
-  padding: 15px;
-  border-radius: 50%;
-  background: #7477bf;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
 }
 
 /* ============================================= */
@@ -642,10 +623,6 @@ header .notifications-bell {
   background: url(../img/svgs/settings.svg) no-repeat;
 }
 
-.home {
-  background: url(../img/svgs/home.svg) no-repeat;
-}
-
 /* ============================================= */
 /*             Main Content of the page                   */
 /* ============================================= */
@@ -705,14 +682,19 @@ header .notifications-bell {
 
 .wrapper-social-containers {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+}
+@media screen and (min-width: 768px) {
+  .wrapper-social-containers {
+    flex-direction: row;
+  }
 }
 
 .social-container {
   flex: 1;
-  margin: 0 10px;
+  margin: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -739,6 +721,38 @@ header .notifications-bell {
 }
 .social-image * {
   fill: white;
+}
+
+.members-container,
+.activity-container {
+  border-bottom: gray solid 0.6px;
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .members-container,
+.activity-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.members-text > *,
+.activity-text > * {
+  margin: 0;
+  text-align: center;
+}
+.members-text > *:last-child,
+.activity-text > *:last-child {
+  color: revert;
+}
+.members .profile-image,
+.activity .profile-image {
+  border-radius: 50%;
 }
 
 /* ============================================= */

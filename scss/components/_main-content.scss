@@ -55,16 +55,19 @@
   }
 }
 
-// Social containers
 .wrapper-social-containers {
-  @include flexy() {
+  @include flexy(column) {
+    // Social containers
     justify-content: space-evenly;
+    @include mq("s") {
+      flex-direction: row;
+    }
   }
 }
 .social-container {
   @extend .card;
   flex: 1;
-  margin: 0 10px;
+  margin: 10px;
   @include flexy() {
     align-items: center;
     justify-content: flex-start;
@@ -90,5 +93,37 @@
   border-radius: 50%;
   * {
     fill: white;
+  }
+}
+
+// Members and activity containers
+
+.members,
+.activity {
+  &-container {
+    border-bottom: gray solid 0.6px;
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    @include flexy(column) {
+      align-items: center;
+      @include mq("s") {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
+  }
+  &-text {
+    > * {
+      margin: 0;
+      text-align: center;
+    }
+    > *:last-child {
+      color: revert;
+    }
+  }
+
+  .profile-image {
+    border-radius: 50%;
   }
 }
