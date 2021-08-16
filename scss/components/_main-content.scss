@@ -42,19 +42,23 @@
   }
 }
 //set width in vw for js charts
-
+// todo .daily,
+// .mobile {
+//   border-bottom: black solid 1px;
+// }
 .widget-container {
   &-full {
-    max-width: 90vw;
+    max-width: 85vw;
   }
   &-half {
-    max-width: 90vw;
+    max-width: 85vw;
     @include mq("s") {
-      max-width: 45vw;
+      max-width: 42vw;
     }
   }
 }
 
+//social section
 .wrapper-social-containers {
   @include flexy(column) {
     // Social containers
@@ -109,21 +113,29 @@
       align-items: center;
       @include mq("s") {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
+      }
+    }
+    > *:last-child {
+      color: revert;
+      @include mq("s") {
+        margin-left: auto;
       }
     }
   }
+  .profile-image {
+    border-radius: 50%;
+  }
   &-text {
     > * {
-      margin: 0;
+      margin: 0 10px;
       text-align: center;
+      @include mq("s") {
+        text-align: start;
+      }
     }
     > *:last-child {
       color: revert;
     }
-  }
-
-  .profile-image {
-    border-radius: 50%;
   }
 }

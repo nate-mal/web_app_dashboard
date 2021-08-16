@@ -34,6 +34,12 @@
 
 .grid-wrapper-main-content {
   display: grid;
+  > *:not(.alert, .main-header) {
+    border-bottom: black solid 1px;
+    > *:last-child {
+      border-bottom: none;
+    }
+  }
   @include mq("s") {
     grid-template-columns: 50%;
     .main-header,
