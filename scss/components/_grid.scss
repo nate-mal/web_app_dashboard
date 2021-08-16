@@ -35,7 +35,7 @@
 .grid-wrapper-main-content {
   display: grid;
   > *:not(.alert, .main-header) {
-    border-bottom: black solid 1px;
+    border-bottom: $border-style;
     > *:last-child {
       border-bottom: none;
     }

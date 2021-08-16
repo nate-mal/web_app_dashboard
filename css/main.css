@@ -382,6 +382,10 @@ html {
   scroll-behavior: smooth;
 }
 
+h3 {
+  margin-left: 10px;
+}
+
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
@@ -516,6 +520,7 @@ header .notifications-bell {
   border-color: #999999;
 }
 
+/* =============Some animation================== */
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
@@ -568,6 +573,7 @@ header .notifications-bell {
 /* ============================================= */
 /* ==============Main header================ */
 .main-header {
+  margin-bottom: 1em;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -608,15 +614,38 @@ header .notifications-bell {
   margin: 5px;
 }
 
-.widget-container-full {
-  max-width: 85vw;
+.widget-container-full, .widget-container-half {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
-.widget-container-half {
-  max-width: 85vw;
+.widget-container-full .canvas-container, .widget-container-half .canvas-container {
+  padding: 0 1em 2em 1em;
+}
+.widget-container-full .canvas-container {
+  width: 90vw;
+}
+.widget-container-half .canvas-container {
+  width: 90vw;
 }
 @media screen and (min-width: 768px) {
-  .widget-container-half {
-    max-width: 42vw;
+  .widget-container-half .canvas-container {
+    width: 45vw;
+  }
+}
+
+.daily,
+.mobile {
+  border: lightgray solid 0.6px;
+}
+
+.mobile h3 {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .mobile .canvas-container {
+    width: 30vw;
   }
 }
 
@@ -665,7 +694,7 @@ header .notifications-bell {
 
 .members-container,
 .activity-container {
-  border-bottom: gray solid 0.6px;
+  border-bottom: lightgray solid 0.6px;
   flex: 1;
   margin: 10px;
   padding: 10px;
@@ -750,7 +779,7 @@ header .notifications-bell {
   display: grid;
 }
 .grid-wrapper-main-content > *:not(.alert, .main-header) {
-  border-bottom: black solid 1px;
+  border-bottom: lightgray solid 0.6px;
 }
 .grid-wrapper-main-content > *:not(.alert, .main-header) > *:last-child {
   border-bottom: none;

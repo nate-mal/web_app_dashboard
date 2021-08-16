@@ -30,13 +30,15 @@ $theme-colours: (
   "col-13": #58e1c1,
   "col-14": #fff,
   //inUse
-  //,,,,,,,,,,,,,,,,,,,,,,,,
+  //,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 $black-filters: (
   "white": invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg)
     brightness(103%) contrast(103%),
   // takes a dark base color and retrive white;
 );
+// border
+$border-style: lightgray solid 0.6px;
 
 /*              BUttons                       */
 
