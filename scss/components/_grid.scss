@@ -33,13 +33,20 @@
 /* ===============Grid system inside main section================ */
 
 .grid-wrapper-main-content {
-  display: grid;
+  & {
+    display: grid;
+  }
+
   > *:not(.alert, .main-header) {
-    border-bottom: $border-style;
+    border: $border-style;
+    border-top: unset;
+    padding: $main-margin;
+
     > *:last-child {
       border-bottom: none;
     }
   }
+
   @include mq("s") {
     grid-template-columns: 50%;
     .main-header,

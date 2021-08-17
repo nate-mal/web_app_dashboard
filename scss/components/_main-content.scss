@@ -5,7 +5,6 @@
 /* ==============Main header================ */
 
 .main-header {
-  margin-bottom: 1em;
   @include flexy();
   .headline-secondary {
     padding: 0 15px 0;
@@ -17,7 +16,9 @@
     display: flex;
     align-items: center;
     input {
-      height: 40%;
+      border: none;
+      border-radius: 5px;
+      height: 60%;
       margin-left: auto;
       margin-right: 10px;
     }

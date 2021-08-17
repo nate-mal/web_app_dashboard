@@ -124,4 +124,15 @@ let mobileChart = new Chart(mobileCanvas, {
   options: mobileOptions,
 });
 
-///slow auto-scroling
+// ///show back-home anc when scroling
+// document.addEventListener("scroll", function () {
+//   document.getElementById("back-home").style.opacity = 1;
+// });
+
+$(window).bind("mousewheel", function (event) {
+  if (event.originalEvent.wheelDelta >= 0) {
+    $("#back-home").fadeIn(1000);
+  } else {
+    $("#back-home").hide(100);
+  }
+});

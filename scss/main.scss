@@ -1,17 +1,14 @@
 // -----------------------------------------------------------------------------
 // This file imports all index files from scss directory;
 
-@import 
-        'utilities/index.scss',// variables, functions, all sass flavours
-        'base/index.scss',// base stuff
-        'components/index.scss'; 
-        
-       
-        
+@import "vendors/toggle-switch.scss";
 
+@import "utilities/index.scss",
+  // variables, functions, all sass flavours
+  "base/index.scss",
+  // base stuff
+  "components/index.scss";
 
-  
-  /* ============================================= */
-  /*              Media Queries                    */
-  /* ============================================= */
-  
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
