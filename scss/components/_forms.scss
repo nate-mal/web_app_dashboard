@@ -1,19 +1,33 @@
 /* ============================================= */
-  /*              Forms                            */
-  /* ============================================= */
-  
-  .form {
-    flex-basis: 100%;
-  }
-  
-  .input{
+/*              Forms                            */
+/* ============================================= */
 
-    @include center;
-    width: 94%;
-    margin-top:10px;
-    padding: 10px;
-    border: none;
-    border-bottom: 5px solid map-get($theme-colours,col-13);
+// .form {
+//   flex-basis: 100%;
+// }
+
+// .input{
+
+//   @include center;
+//   width: 94%;
+//   margin-top:10px;
+//   padding: 10px;
+//   border: none;
+//   border-bottom: 5px solid map-get($theme-colours,col-13);
+// }
+
+form.widget-container {
+  @include flexy(column);
+  > *:not(button) {
+    margin: 5px;
+    border-radius: 5px;
+    background-color: darken($color: #fff, $amount: 5%);
   }
-  
-  
+  input[type="text"] {
+    border-color: darken($color: #fff, $amount: 5%);
+    height: 40px;
+  }
+  textarea {
+    height: 100px;
+  }
+}

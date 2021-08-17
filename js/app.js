@@ -12,7 +12,7 @@ $(alertBanner).hide().delay(600).slideDown();
 alertBanner.addEventListener("click", (e) => {
   const element = e.target;
   if (element.classList.contains("alert-banner-close")) {
-    alertBanner.style.display = "none";
+    $(alertBanner).hide(500);
   }
 });
 

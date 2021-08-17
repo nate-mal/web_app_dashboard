@@ -451,6 +451,19 @@ h3 {
   color: #fff;
 }
 
+.button-primary, .button-disabled {
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #7477bf;
+}
+
+.button-disabled {
+  background-color: gray;
+}
+
 /* ============================================= */
 /*             User pop-up alerts                         */
 /* ============================================= */
@@ -473,20 +486,22 @@ h3 {
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
-.form {
-  flex-basis: 100%;
+form.widget-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
-
-.input {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  width: 94%;
-  margin-top: 10px;
-  padding: 10px;
-  border: none;
-  border-bottom: 5px solid #58e1c1;
+form.widget-container > *:not(button) {
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+form.widget-container input[type=text] {
+  border-color: #f2f2f2;
+  height: 40px;
+}
+form.widget-container textarea {
+  height: 100px;
 }
 
 /* ============================================= */
@@ -520,7 +535,6 @@ header .notifications-bell {
   border-color: #999999;
 }
 
-/* =============Some animation================== */
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
