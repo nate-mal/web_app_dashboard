@@ -701,6 +701,17 @@
   overflow: hidden;
 }
 
+.members,
+.activity {
+  font-size: 0.9em;
+}
+@media screen and (min-width: 768px) {
+  .members,
+.activity {
+    font-size: unset;
+  }
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1152,10 +1163,16 @@ h3 {
 /*              Buttons                          */
 /* ============================================= */
 .btn, .alert-banner {
+  font-size: 0.8em;
   list-style: none;
-  padding: 10px;
+  padding: 5px;
   margin: 0 5px;
   border-radius: 20px;
+}
+@media screen and (min-width: 768px) {
+  .btn, .alert-banner {
+    font-size: 1em;
+  }
 }
 .btn-selected {
   background-color: #63cc82;
@@ -1372,6 +1389,7 @@ header .notifications-bell {
   align-items: center;
 }
 .main-header .main-header-search input {
+  max-width: 50vw;
   border: none;
   border-radius: 5px;
   height: 60%;
@@ -1404,9 +1422,6 @@ header .notifications-bell {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-}
-.widget-container-full .canvas-container, .widget-container-half .canvas-container {
-  padding: 0 1em 2em 1em;
 }
 .widget-container-full .canvas-container {
   width: 90vw;
@@ -1481,12 +1496,17 @@ header .notifications-bell {
 .activity-container {
   border-bottom: lightgray solid 0.6px;
   flex: 1;
-  margin: 10px;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .members-container,
+.activity-container {
+    margin: 10px;
+    padding: 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   .members-container,
@@ -1566,7 +1586,6 @@ header .notifications-bell {
 .grid-wrapper-main-content > *:not(.alert, .main-header) {
   border: lightgray solid 0.6px;
   border-top: unset;
-  padding: 1em;
 }
 .grid-wrapper-main-content > *:not(.alert, .main-header) > *:last-child {
   border-bottom: none;

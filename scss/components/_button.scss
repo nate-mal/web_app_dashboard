@@ -3,8 +3,12 @@
 /* ============================================= */
 
 .btn {
+  font-size: 0.8em;
+  @include mq("s") {
+    font-size: 1em;
+  }
   list-style: none;
-  padding: 10px;
+  padding: 5px;
   margin: 0 5px;
   border-radius: 20px;
 
