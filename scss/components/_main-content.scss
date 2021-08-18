@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     input {
-      max-width: 50vw;
+      max-width: 45vw;
       border: none;
       border-radius: 5px;
       height: 60%;
@@ -135,7 +135,6 @@
 
 .members,
 .activity {
-  @extend %fix-font-size;
   &-container {
     border-bottom: $border-style;
     flex: 1;
@@ -158,6 +157,8 @@
     }
   }
   .profile-image {
+    width: 128px;
+    height: auto;
     border-radius: 50%;
   }
   &-text {

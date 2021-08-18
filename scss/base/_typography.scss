@@ -20,25 +20,28 @@
   }
   &-profile-name {
     font-weight: map-get($map: $font, $key: weight-thin);
-    font-size: 0.8em;
-    @include mq("s") {
-      font-size: 1em;
-    }
+    @extend %fix-font-size;
   }
   &-secondary {
     font-weight: map-get($map: $font, $key: weight-bold);
     font-size: 0.8em;
-    @include mq("s") {
-      font-size: 1em;
-    }
+    @extend %fix-font-size;
   }
 }
 .alert {
   p {
-    font-size: 0.8em;
-    @include mq("s") {
-      font-size: 1em;
-    }
+    @extend %fix-font-size;
+  }
+}
+.members,
+.activity,
+.settings,
+.members {
+  @extend %fix-font-size;
+}
+.members {
+  a {
+    word-break: break-all;
   }
 }
 

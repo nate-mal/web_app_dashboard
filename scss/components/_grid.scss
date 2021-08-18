@@ -40,7 +40,6 @@
   > *:not(.alert, .main-header) {
     border: $border-style;
     border-top: unset;
-    // padding: $main-margin;
 
     > *:last-child {
       border-bottom: none;

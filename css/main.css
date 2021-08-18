@@ -702,12 +702,14 @@
 }
 
 .members,
-.activity {
-  font-size: 0.9em;
+.activity,
+.settings, .alert p, .headline-secondary, .headline-profile-name {
+  font-size: 0.85em;
 }
 @media screen and (min-width: 768px) {
   .members,
-.activity {
+.activity,
+.settings, .alert p, .headline-secondary, .headline-profile-name {
     font-size: unset;
   }
 }
@@ -1102,30 +1104,14 @@ h3 {
 }
 .headline-profile-name {
   font-weight: 300;
-  font-size: 0.8em;
-}
-@media screen and (min-width: 768px) {
-  .headline-profile-name {
-    font-size: 1em;
-  }
 }
 .headline-secondary {
   font-weight: 700;
   font-size: 0.8em;
 }
-@media screen and (min-width: 768px) {
-  .headline-secondary {
-    font-size: 1em;
-  }
-}
 
-.alert p {
-  font-size: 0.8em;
-}
-@media screen and (min-width: 768px) {
-  .alert p {
-    font-size: 1em;
-  }
+.members a {
+  word-break: break-all;
 }
 
 /* ============================================= */
@@ -1389,7 +1375,7 @@ header .notifications-bell {
   align-items: center;
 }
 .main-header .main-header-search input {
-  max-width: 50vw;
+  max-width: 45vw;
   border: none;
   border-radius: 5px;
   height: 60%;
@@ -1527,6 +1513,8 @@ header .notifications-bell {
 }
 .members .profile-image,
 .activity .profile-image {
+  width: 128px;
+  height: auto;
   border-radius: 50%;
 }
 .members-text > *,
