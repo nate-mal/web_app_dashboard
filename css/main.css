@@ -1343,6 +1343,7 @@ header .notifications-bell {
   right: 1em;
   border-radius: 50%;
   opacity: 0.6;
+  z-index: 1;
 }
 #back-home svg {
   width: 50px;
@@ -1368,6 +1369,7 @@ header .notifications-bell {
   padding: 0 15px 0;
 }
 .main-header .main-header-search {
+  margin-right: -10px;
   flex: 1;
   background-color: #f2f2f2;
   box-shadow: -1px 1px 1px 1px #e6e6e6;
@@ -1419,11 +1421,6 @@ header .notifications-bell {
   .widget-container-half .canvas-container {
     width: 45vw;
   }
-}
-
-.daily,
-.mobile {
-  border: lightgray solid 0.6px;
 }
 
 .mobile h3 {
@@ -1482,17 +1479,12 @@ header .notifications-bell {
 .activity-container {
   border-bottom: lightgray solid 0.6px;
   flex: 1;
+  margin: 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .members-container,
-.activity-container {
-    margin: 10px;
-    padding: 10px;
-  }
 }
 @media screen and (min-width: 768px) {
   .members-container,
@@ -1570,9 +1562,21 @@ header .notifications-bell {
 /* ===============Grid system inside main section================ */
 .grid-wrapper-main-content {
   display: grid;
+  margin: 10px;
+}
+.grid-wrapper-main-content > * {
+  position: relative;
+}
+.grid-wrapper-main-content > *::after {
+  content: "";
+  position: absolute;
+  border-bottom: lightgray solid 0.6px;
+  left: -10px;
+  right: -10px;
+  top: 0px;
+  z-index: -1;
 }
 .grid-wrapper-main-content > *:not(.alert, .main-header) {
-  border: lightgray solid 0.6px;
   border-top: unset;
 }
 .grid-wrapper-main-content > *:not(.alert, .main-header) > *:last-child {

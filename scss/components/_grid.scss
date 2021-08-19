@@ -35,10 +35,23 @@
 .grid-wrapper-main-content {
   & {
     display: grid;
+    margin: $main-margin;
+  }
+  > * {
+    position: relative;
+  }
+  > *::after {
+    content: "";
+    position: absolute;
+    border-bottom: $border-style;
+    left: neg($main-margin);
+    right: neg($main-margin);
+    top: 0px;
+    z-index: -1;
   }
 
   > *:not(.alert, .main-header) {
-    border: $border-style;
+    // border: $border-style;
     border-top: unset;
 
     > *:last-child {

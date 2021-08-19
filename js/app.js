@@ -129,10 +129,10 @@ let mobileChart = new Chart(mobileCanvas, {
 //   document.getElementById("back-home").style.opacity = 1;
 // });
 
-$(window).bind("mousewheel", function (event) {
-  if (event.originalEvent.wheelDelta >= 0) {
-    $("#back-home").fadeIn(1000);
-  } else {
+$(window).scroll(function () {
+  if ($(window).scrollTop() == 0) {
     $("#back-home").hide(100);
+  } else {
+    $("#back-home").fadeIn(1000);
   }
 });

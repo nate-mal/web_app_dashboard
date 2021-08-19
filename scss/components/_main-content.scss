@@ -10,6 +10,7 @@
     padding: 0 15px 0;
   }
   .main-header-search {
+    margin-right: neg($main-margin);
     flex: 1;
     background-color: darken(#fff, 5%);
     box-shadow: -1px 1px 1px 1px darken(#fff, 10%);
@@ -73,10 +74,6 @@
 }
 
 //fix alignment- align daily chart with mobile
-.daily,
-.mobile {
-  border: $border-style;
-}
 
 .mobile {
   h3 {
@@ -138,10 +135,8 @@
   &-container {
     border-bottom: $border-style;
     flex: 1;
-    @include mq("s") {
-      margin: 10px;
-      padding: 10px;
-    }
+    margin: 10px;
+    padding: 10px;
     @include flexy(column) {
       align-items: center;
       @include mq("s") {
