@@ -1202,6 +1202,12 @@ h3 {
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
+@media screen and (min-width: 1024px) {
+  .message {
+    border-right: lightgray solid 0.6px;
+  }
+}
+
 .form-widget-container, .settings {
   display: flex;
   flex-direction: column;
@@ -1493,6 +1499,10 @@ header .notifications-bell {
     justify-content: space-between;
   }
 }
+.members-container:last-child,
+.activity-container:last-child {
+  border: none;
+}
 .members-container > *:last-child,
 .activity-container > *:last-child {
   color: revert;
@@ -1562,25 +1572,6 @@ header .notifications-bell {
 /* ===============Grid system inside main section================ */
 .grid-wrapper-main-content {
   display: grid;
-  margin: 10px;
-}
-.grid-wrapper-main-content > * {
-  position: relative;
-}
-.grid-wrapper-main-content > *::after {
-  content: "";
-  position: absolute;
-  border-bottom: lightgray solid 0.6px;
-  left: -10px;
-  right: -10px;
-  top: 0px;
-  z-index: -1;
-}
-.grid-wrapper-main-content > *:not(.alert, .main-header) {
-  border-top: unset;
-}
-.grid-wrapper-main-content > *:not(.alert, .main-header) > *:last-child {
-  border-bottom: none;
 }
 @media screen and (min-width: 768px) {
   .grid-wrapper-main-content {
@@ -1609,6 +1600,37 @@ header .notifications-bell {
   }
   .grid-wrapper-main-content .activity {
     grid-column: 2/span 1;
+  }
+}
+
+.grid-wrapper-main-content {
+  margin: 10px;
+}
+.grid-wrapper-main-content > * {
+  position: relative;
+}
+.grid-wrapper-main-content > *:not(.alert, .main-header)::after {
+  content: "";
+  position: absolute;
+  border-bottom: lightgray solid 0.6px;
+  left: -10px;
+  right: -10px;
+  bottom: 0px;
+  z-index: -1;
+}
+.grid-wrapper-main-content > *:last-child::after {
+  border-bottom: none;
+}
+@media screen and (min-width: 1024px) {
+  .grid-wrapper-main-content .message::after {
+    border-bottom: none;
+    border-right: lightgray solid 0.6px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid-wrapper-main-content .members,
+.grid-wrapper-main-content .message {
+    border-right: lightgray solid 0.6px;
   }
 }
 

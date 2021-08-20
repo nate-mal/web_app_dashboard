@@ -35,30 +35,7 @@
 .grid-wrapper-main-content {
   & {
     display: grid;
-    margin: $main-margin;
   }
-  > * {
-    position: relative;
-  }
-  > *::after {
-    content: "";
-    position: absolute;
-    border-bottom: $border-style;
-    left: neg($main-margin);
-    right: neg($main-margin);
-    top: 0px;
-    z-index: -1;
-  }
-
-  > *:not(.alert, .main-header) {
-    // border: $border-style;
-    border-top: unset;
-
-    > *:last-child {
-      border-bottom: none;
-    }
-  }
-
   @include mq("s") {
     grid-template-columns: 50%;
     .main-header,
@@ -84,6 +61,41 @@
     }
     .activity {
       grid-column: 2 / span 1;
+    }
+  }
+}
+//border sytle and margin
+.grid-wrapper-main-content {
+  & {
+    margin: $main-margin;
+  }
+  > * {
+    position: relative;
+  }
+  > *:not(.alert, .main-header)::after {
+    content: "";
+    position: absolute;
+    border-bottom: $border-style;
+    left: neg($main-margin);
+    right: neg($main-margin);
+    bottom: 0px;
+    z-index: -1;
+  }
+  > * {
+    &:last-child::after {
+      border-bottom: none;
+    }
+  }
+  @include mq("m") {
+    .message::after {
+      border-bottom: none;
+      border-right: $border-style;
+    }
+  }
+  @include mq("s") {
+    .members,
+    .message {
+      border-right: $border-style;
     }
   }
 }
