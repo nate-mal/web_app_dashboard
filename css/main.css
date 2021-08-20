@@ -1202,12 +1202,6 @@ h3 {
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
-@media screen and (min-width: 1024px) {
-  .message {
-    border-right: lightgray solid 0.6px;
-  }
-}
-
 .form-widget-container, .settings {
   display: flex;
   flex-direction: column;
@@ -1621,15 +1615,17 @@ header .notifications-bell {
 .grid-wrapper-main-content > *:last-child::after {
   border-bottom: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .grid-wrapper-main-content .message::after {
     border-bottom: none;
+  }
+  .grid-wrapper-main-content .message,
+.grid-wrapper-main-content .daily {
     border-right: lightgray solid 0.6px;
   }
 }
-@media screen and (min-width: 768px) {
-  .grid-wrapper-main-content .members,
-.grid-wrapper-main-content .message {
+@media screen and (min-width: 1024px) {
+  .grid-wrapper-main-content .members {
     border-right: lightgray solid 0.6px;
   }
 }

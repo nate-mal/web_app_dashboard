@@ -15,11 +15,7 @@
 //   border: none;
 //   border-bottom: 5px solid map-get($theme-colours,col-13);
 // }
-.message {
-  @include mq("m") {
-    border-right: $border-style;
-  }
-}
+
 .form-widget-container {
   @include flexy(column);
   .form-field,

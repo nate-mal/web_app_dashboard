@@ -125,9 +125,6 @@ let mobileChart = new Chart(mobileCanvas, {
 });
 
 // ///show back-home anc when scroling
-// document.addEventListener("scroll", function () {
-//   document.getElementById("back-home").style.opacity = 1;
-// });
 
 $(window).scroll(function () {
   if ($(window).scrollTop() == 0) {

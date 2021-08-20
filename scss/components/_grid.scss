@@ -86,15 +86,17 @@
       border-bottom: none;
     }
   }
-  @include mq("m") {
+  @include mq("s") {
     .message::after {
       border-bottom: none;
+    }
+    .message,
+    .daily {
       border-right: $border-style;
     }
   }
-  @include mq("s") {
-    .members,
-    .message {
+  @include mq("m") {
+    .members {
       border-right: $border-style;
     }
   }
