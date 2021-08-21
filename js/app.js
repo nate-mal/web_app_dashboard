@@ -9,6 +9,20 @@ notificationSection.addEventListener("click", (e) => {
     $(notificationContainer).slideUp(300);
   }
 });
+// function hasNotifications(notificationSection) {
+//   notifyContainers = notificationSection.children;
+//   for (eachContainer of notifyContainers) {
+//     if (eachContainer.style.display !== "none") return true;
+//   }
+//   return false;
+// }
+// notificationSection.addEventListener("change", () => {
+//   if (hasNotifications(notificationSection)) {
+//     if (!notificationSection.parentNode.className.includes("hasNotifications"))
+//       notificationSection.parentNode.className += " hasNotifications";
+//   } else
+//     notificationSection.parentNode.className.replace("hasNotifications", "");
+// });
 
 //ALERT BANNER
 const alertBanner = document.getElementById("alert");

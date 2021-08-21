@@ -1361,11 +1361,21 @@ header .avatar {
   border-radius: 50%;
 }
 header .notifications-bell {
+  position: relative;
   border-right: solid 0.6px;
   border-color: #999999;
   padding: 5px;
 }
-header .notifications-bell .bell:hover {
+header .notifications-bell::after {
+  content: "•";
+  font-size: 30px;
+  display: block;
+  position: absolute;
+  top: -15px;
+  right: 1px;
+  color: green;
+}
+header .bell:hover {
   transition: transform 0.3 s ease-in-out;
   transform: scale(1.1);
 }

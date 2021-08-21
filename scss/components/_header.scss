@@ -102,13 +102,24 @@ header {
   }
 
   .notifications-bell {
+    position: relative;
     border-right: solid 0.6px;
     border-color: darken(map-get($theme-colours, col-14), 40%);
     padding: 5px;
-    .bell:hover {
-      transition: transform 0.3 s ease-in-out;
-      transform: scale(1.1);
+    &::after {
+      content: "\2022";
+      font-size: 30px;
+      display: block;
+      position: absolute;
+      top: -15px;
+      right: 1px;
+      color: green;
     }
+  }
+
+  .bell:hover {
+    transition: transform 0.3 s ease-in-out;
+    transform: scale(1.1);
   }
 }
 
