@@ -92,8 +92,10 @@
   .autocomplete {
     /*the container must be positioned relative:*/
     position: relative;
+    min-width: 100px;
+    display: flex;
     * {
-      width: 100%;
+      flex: 1;
     }
   }
   // input {
