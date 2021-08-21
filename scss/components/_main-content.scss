@@ -26,6 +26,11 @@
     }
   }
 }
+main {
+  @include mq("s") {
+    margin-top: 55px;
+  }
+}
 /* ==============Widgets and Charts================ */
 .traffic {
   .traffic-header {

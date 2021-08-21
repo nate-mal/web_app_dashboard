@@ -79,7 +79,12 @@
 /*             Header                   */
 /* ============================================= */
 header {
+  margin-bottom: 55px;
+  position: fixed;
+  right: 0;
+  left: 0;
   height: 65px;
+  z-index: 1;
   @include flexy() {
     align-items: center;
     background-color: map-get($map: $theme-colours, $key: col-header);
@@ -106,6 +111,9 @@ header {
     border-right: solid 0.6px;
     border-color: darken(map-get($theme-colours, col-14), 40%);
     padding: 5px;
+    label {
+      cursor: pointer;
+    }
     &::after {
       content: "\2022";
       font-size: 30px;
@@ -124,12 +132,7 @@ header {
 }
 
 /* The container <div> - needed to position the dropdown content */
-.dropdown {
-  cursor: pointer;
-  @include mq("s") {
-    position: relative;
-  }
-}
+
 // drop button
 #dropcheck {
   position: absolute;
@@ -149,8 +152,9 @@ header {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   @include mq("s") {
+    position: absolute;
     left: unset;
-    right: -20px;
+    right: 0px;
     width: 350px;
   }
 }
