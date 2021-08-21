@@ -16,9 +16,53 @@ alertBanner.addEventListener("click", (e) => {
   }
 });
 
-const trafficCanvas = document.querySelector("#traffic-chart");
-
-let trafficData = {
+let trafficCanvas = document.querySelector("#traffic-chart");
+const canvasContainer = trafficCanvas.parentNode;
+let trafficDataHourly = {
+  labels: [
+    "10am",
+    "11am",
+    "12pm",
+    "1pm",
+    "2pm",
+    "3pm",
+    "4pm",
+    "5pm",
+    "6pm",
+    "7pm",
+    "8pm",
+  ],
+  datasets: [
+    {
+      data: [50, 12, 10, 20, 15, 17, 50, 18, 22, 15, 25],
+      backgroundColor: "rgba(116, 119, 191, .5)",
+      borderWidth: 1,
+    },
+  ],
+};
+let trafficDataDaily = {
+  labels: [
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+  ],
+  datasets: [
+    {
+      data: [75, 50, 100, 200, 1500, 150, 250, 150, 250, 500, 500],
+      backgroundColor: "rgba(116, 119, 191, .5)",
+      borderWidth: 1,
+    },
+  ],
+};
+let trafficDataWeekly = {
   labels: [
     "16-22",
     "23-29",
@@ -35,6 +79,31 @@ let trafficData = {
   datasets: [
     {
       data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
+      backgroundColor: "rgba(116, 119, 191, .5)",
+      borderWidth: 1,
+    },
+  ],
+};
+let trafficDataMonthly = {
+  labels: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ],
+  datasets: [
+    {
+      data: [
+        750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500, 1500,
+      ],
       backgroundColor: "rgba(116, 119, 191, .5)",
       borderWidth: 1,
     },
@@ -58,7 +127,7 @@ let trafficOptions = {
 };
 let trafficChart = new Chart(trafficCanvas, {
   type: "line",
-  data: trafficData,
+  data: trafficDataWeekly,
   options: trafficOptions,
 });
 
@@ -131,6 +200,50 @@ $(window).scroll(function () {
     $("#back-home").hide(100);
   } else {
     $("#back-home").fadeIn(1000);
+  }
+});
+
+//traffic section
+function resetCanvas(canvasContainer) {
+  let newTrafficCanvas = document.createElement("canvas");
+  newTrafficCanvas.id = canvasContainer.querySelector("canvas").id;
+  canvasContainer.innerHTML = "";
+  canvasContainer.appendChild(newTrafficCanvas);
+
+  return newTrafficCanvas;
+}
+const trafficSection = document.querySelector(".traffic");
+
+trafficSection.addEventListener("click", (e) => {
+  if (e.target.className.includes("btn")) {
+    const button = e.target;
+    const buttonContainer = button.parentNode;
+    for (eachButton of buttonContainer.children) {
+      eachButton.className = eachButton.className.replace("btn-selected", "");
+    }
+    button.className += " btn-selected";
+    // if (button.textContent === "Hourly") {
+    //   let trafficData = trafficDataHourly;}
+    let trafficData;
+    switch (button.textContent.toLowerCase()) {
+      case "hourly":
+        trafficData = trafficDataHourly;
+        break;
+      case "daily":
+        trafficData = trafficDataDaily;
+        break;
+      case "weekly":
+        trafficData = trafficDataWeekly;
+        break;
+      default:
+        trafficData = trafficDataMonthly;
+    }
+
+    let trafficChart = new Chart(resetCanvas(canvasContainer), {
+      type: "line",
+      data: trafficData,
+      options: trafficOptions,
+    });
   }
 });
 

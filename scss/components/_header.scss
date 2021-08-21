@@ -106,7 +106,7 @@ header {
     border-color: darken(map-get($theme-colours, col-14), 40%);
     padding: 5px;
     .bell:hover {
-      animation: ring 3s ease-in-out;
+      animation: ring 6s ease-in-out;
     }
   }
 }

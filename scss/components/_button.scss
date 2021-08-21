@@ -11,9 +11,11 @@
   padding: 5px;
   margin: 0 5px;
   border-radius: 20px;
-
+  cursor: pointer;
   &-selected {
+    transition: background-color 0.3s ease-in-out;
     background-color: map-get($map: $theme-colours, $key: col-10);
+    box-shadow: -1px 1px 5px black;
     color: map-get($map: $theme-colours, $key: col-14);
   }
 }

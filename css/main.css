@@ -1154,6 +1154,7 @@ h3 {
   padding: 5px;
   margin: 0 5px;
   border-radius: 20px;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .btn, .alert-banner {
@@ -1161,7 +1162,9 @@ h3 {
   }
 }
 .btn-selected {
+  transition: background-color 0.3s ease-in-out;
   background-color: #63cc82;
+  box-shadow: -1px 1px 5px black;
   color: #fff;
 }
 
@@ -1363,7 +1366,7 @@ header .notifications-bell {
   padding: 5px;
 }
 header .notifications-bell .bell:hover {
-  animation: ring 3s ease-in-out;
+  animation: ring 6s ease-in-out;
 }
 
 /* ============================================= */
