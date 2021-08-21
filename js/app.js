@@ -1,3 +1,16 @@
+// notifications
+const notificationSection = document.getElementById("notifications");
+
+notificationSection.addEventListener("click", (e) => {
+  const element = e.target;
+
+  if (element.classList.contains("notification-container-close")) {
+    const notificationContainer = element.parentNode;
+    $(notificationContainer).slideUp(300);
+  }
+});
+
+//ALERT BANNER
 const alertBanner = document.getElementById("alert");
 // create the html for the banner
 alertBanner.innerHTML = `
@@ -12,7 +25,7 @@ $(alertBanner).hide().delay(600).slideDown();
 alertBanner.addEventListener("click", (e) => {
   const element = e.target;
   if (element.classList.contains("alert-banner-close")) {
-    $(alertBanner).hide(500);
+    $(alertBanner).slideUp(500);
   }
 });
 
