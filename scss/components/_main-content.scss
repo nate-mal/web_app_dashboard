@@ -58,9 +58,6 @@ main {
     @include flexy(column) {
       align-items: center;
     }
-    .canvas-container {
-      // padding: 0 1em 2em 1em;
-    }
   }
   &-full {
     .canvas-container {

@@ -65,6 +65,10 @@
 // }
 
 .switch-ios.switch-light.custom-switch {
+  a:focus {
+    outline: none;
+  }
+
   margin: 1em;
   @include flexy();
   > * {
@@ -84,6 +88,10 @@
   input:checked ~ span {
     border-color: $color-switch;
     box-shadow: inset 0 0 0 30px $color-switch;
+  }
+  input:focus:not(:focus-visible) ~ span a,
+  input:focus:not(:focus-visible) + label {
+    outline: none;
   }
 }
 
