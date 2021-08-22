@@ -1639,14 +1639,14 @@ header .bell:hover {
   align-items: center;
 }
 .widget-container-full .canvas-container {
-  width: 90vw;
+  width: 85vw;
 }
 .widget-container-half .canvas-container {
-  width: 90vw;
+  width: 85vw;
 }
 @media screen and (min-width: 768px) {
   .widget-container-half .canvas-container {
-    width: 45vw;
+    width: 40vw;
   }
 }
 

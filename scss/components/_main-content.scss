@@ -61,14 +61,14 @@ main {
   }
   &-full {
     .canvas-container {
-      width: 90vw;
+      width: 85vw;
     }
   }
   &-half {
     .canvas-container {
-      width: 90vw;
+      width: 85vw;
       @include mq("s") {
-        width: 45vw;
+        width: 40vw;
         // margin-bottom: 1em;
       }
     }
