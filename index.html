@@ -213,7 +213,7 @@
             <!-- custom CSS toggle code-->
             <div class = "switch-container">
             <label class="switch-light switch-ios custom-switch" onclick="">
-              <input type="checkbox">
+              <input  id="sendEmailNotification" type="checkbox">
               <strong>
                 Send Email Notifications
               </strong>
@@ -226,7 +226,7 @@
             </label>
             <!-- custom CSS toggle code-->
             <label class="switch-light switch-ios custom-switch" onclick="">
-              <input type="checkbox">
+              <input id="setProfilePublic" type="checkbox">
               <strong>
                 Set Profile To Public
               </strong>
@@ -239,8 +239,14 @@
             </label>
           </div>
             <select class="form-field" id="timezone">
-              <option disabled selected>Select a Timezone</option>
-              <option>Eastern</option>
+              <option disabled  value="default">Select a Timezone</option>
+              <option value="eastern">Eastern</option>
+              <option value="western">Western</option>
+              <option value="north">North</option>
+              <option value="south">South</option>
+              <option value="north-eastern">North Eastern</option>
+              <option value="south-eastern">South Eastern</option>
+              
               <!-- more options -->
             </select>
             <div class="settings-button">

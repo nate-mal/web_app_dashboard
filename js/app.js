@@ -394,11 +394,62 @@ send.addEventListener("click", () => {
   }
 });
 var search_terms = [
-  "apple",
-  "apple watch",
-  "apple macbook",
-  "apple macbook pro",
-  "iphone",
-  "iphone 12",
+  "Victoria Chambers",
+  "Dale Byrd",
+  "Dawn Wood",
+  "Dan Oliver",
+  "Peter Fox",
+  "William Sonoma",
 ];
 autocomplete(user, search_terms);
+
+// SETTINGS
+const settingsContainer = document.querySelector("#settings-section");
+const sendEmailNotifications = settingsContainer.querySelector(
+  "#sendEmailNotification"
+);
+const setProfilePublic = settingsContainer.querySelector("#setProfilePublic");
+const timeZone = settingsContainer.querySelector("#timezone");
+const saveSettings = settingsContainer.querySelector("#save");
+const resetSettings = settingsContainer.querySelector("#cancel");
+const defaultSettingsData = {
+  sendEmailNotifications: false,
+  setProfilePublic: false,
+  timeZone: "default",
+};
+function pushSettingsToLocalStorage(settingsDataToPush) {
+  localStorage.setItem("settingsData", JSON.stringify(settingsDataToPush));
+}
+if (!localStorage.getItem("settingsData")) {
+  pushSettingsToLocalStorage(defaultSettingsData);
+}
+
+function displaySavedSettings(settingsData) {
+  function setTimeZone() {
+    const value = settingsData["timeZone"];
+    timeZone.querySelector("option[value=" + value + "]").selected = true;
+  }
+  sendEmailNotifications.checked = settingsData["sendEmailNotifications"];
+  setProfilePublic.checked = settingsData["setProfilePublic"];
+  setTimeZone();
+}
+
+window.onload = () => {
+  displaySavedSettings(JSON.parse(localStorage.getItem("settingsData")));
+};
+
+saveSettings.addEventListener("click", () => {
+  let settingsData = {};
+  if (sendEmailNotifications.checked == 1) {
+    settingsData.sendEmailNotifications = true;
+  } else settingsData.sendEmailNotifications = false;
+  if (setProfilePublic.checked == 1) {
+    settingsData.setProfilePublic = true;
+  } else settingsData.setProfilePublic = false;
+  var timeZoneValue = timeZone.options[timeZone.selectedIndex].value;
+  settingsData.timeZone = timeZoneValue;
+  pushSettingsToLocalStorage(settingsData);
+});
+resetSettings.addEventListener("click", () => {
+  displaySavedSettings(defaultSettingsData);
+});

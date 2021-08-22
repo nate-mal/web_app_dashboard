@@ -67,7 +67,7 @@
 //border sytle and margin
 .grid-wrapper-main-content {
   & {
-    margin: $main-margin;
+    margin: 0 $main-margin;
   }
   > * {
     position: relative;
