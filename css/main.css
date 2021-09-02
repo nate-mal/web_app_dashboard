@@ -1419,7 +1419,7 @@ header .notifications-bell {
 header .notifications-bell label {
   cursor: pointer;
 }
-header .notifications-bell::after {
+header .alert::after {
   content: "•";
   font-size: 30px;
   display: block;

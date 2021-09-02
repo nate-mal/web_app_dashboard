@@ -1,12 +1,46 @@
+//test timeout
+
 // notifications
 const notificationSection = document.getElementById("notifications");
 
+//not bell alert
+function notifyAlert() {
+  function checkForNotificationsAlert() {
+    notificationContainers = notificationSection.children;
+    if (notificationContainers) {
+      for (each of notificationContainers) {
+        if (!each.classList.contains("canceled")) {
+          if (
+            !document
+              .querySelector(".notifications-bell")
+              .className.includes("alert")
+          )
+            document.querySelector(".notifications-bell").className += " alert";
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  if (!checkForNotificationsAlert()) {
+    if (
+      document.querySelector(".notifications-bell").className.includes("alert")
+    )
+      document.querySelector(".notifications-bell").className = document
+        .querySelector(".notifications-bell")
+        .className.replace("alert", "");
+  }
+}
+notifyAlert();
 notificationSection.addEventListener("click", (e) => {
   const element = e.target;
 
   if (element.classList.contains("notification-container-close")) {
     const notificationContainer = element.parentNode;
+    notificationContainer.classList += " canceled";
     $(notificationContainer).slideUp(300);
+    notifyAlert();
   }
 });
 // function hasNotifications(notificationSection) {

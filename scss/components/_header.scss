@@ -114,15 +114,16 @@ header {
     label {
       cursor: pointer;
     }
-    &::after {
-      content: "\2022";
-      font-size: 30px;
-      display: block;
-      position: absolute;
-      top: -15px;
-      right: 1px;
-      color: green;
-    }
+  }
+  //make a special class for notifications alert
+  .alert::after {
+    content: "\2022";
+    font-size: 30px;
+    display: block;
+    position: absolute;
+    top: -15px;
+    right: 1px;
+    color: green;
   }
 
   .bell:hover {
