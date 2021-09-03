@@ -65,16 +65,17 @@
   a:focus {
     outline: none;
   }
-  > span {
-    max-width: 100px;
-  }
+
   margin: 1em;
-  @include flexy();
+  @include flexy() {
+    justify-content: start;
+  }
   > * {
     flex: 1;
+    max-width: 250px;
   }
-  strong {
-    flex: 2;
+  span {
+    max-width: 100px;
   }
 
   $color-switch: map-get(
@@ -93,7 +94,6 @@
     outline: none;
   }
 }
-
 // :::::::::::::::::Search autocomplete::::::::::::::::::
 .message {
   .autocomplete {

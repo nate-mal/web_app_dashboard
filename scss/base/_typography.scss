@@ -24,7 +24,6 @@
   }
   &-secondary {
     font-weight: map-get($map: $font, $key: weight-bold);
-    font-size: 0.8em;
     @extend %fix-font-size;
   }
 }

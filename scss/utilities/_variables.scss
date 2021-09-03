@@ -17,7 +17,7 @@ $theme-colours: (
   //warning for buttons
   "col-3": #deb2ee,
   "col-4": #7ee6fd,
-  "col-5": #88d9a0,
+  "col-5": #50b86f,
   "col-6": #4da2bb,
   "col-7": #ec9fa3,
   "col-8": #fd9f85,
@@ -30,7 +30,7 @@ $theme-colours: (
   "col-13": #58e1c1,
   "col-14": #fff,
   //inUse
-  //,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  //,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 $black-filters: (
   "white": invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg)
