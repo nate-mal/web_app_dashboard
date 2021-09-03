@@ -48,9 +48,6 @@
       }
     }
   }
-  // .switch-container {
-  //   @include flexy();
-  // }
 }
 /* ==============Custom Switch=================== */
 // source style for switches
@@ -68,7 +65,9 @@
   a:focus {
     outline: none;
   }
-
+  > span {
+    max-width: 100px;
+  }
   margin: 1em;
   @include flexy();
   > * {

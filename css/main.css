@@ -1192,7 +1192,7 @@ h3 {
   flex-wrap: nowrap;
   justify-content: space-between;
   padding: 0 10px;
-  margin-top: 5px;
+  margin-top: 10px;
   background-color: #7477bf;
   color: #fff;
 }
@@ -1249,6 +1249,9 @@ h3 {
 }
 .switch-ios.switch-light.custom-switch a:focus {
   outline: none;
+}
+.switch-ios.switch-light.custom-switch > span {
+  max-width: 100px;
 }
 .switch-ios.switch-light.custom-switch > * {
   flex: 1;
@@ -1426,7 +1429,7 @@ header .alert::after {
   position: absolute;
   top: -15px;
   right: 1px;
-  color: green;
+  color: #63cc82;
 }
 header .bell:hover {
   transition: transform 0.3 s ease-in-out;
@@ -1493,7 +1496,7 @@ header .bell:hover {
   margin-left: 25px;
 }
 .notification-container a::marker {
-  color: green;
+  color: #63cc82;
 }
 .notification-container-close {
   padding: 5px 10px;
