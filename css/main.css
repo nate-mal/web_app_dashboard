@@ -1240,6 +1240,46 @@ h3 {
   flex: 1;
 }
 
+.settings {
+  /*To remove button from IE11, thank you Matt */
+}
+.settings div.selectdiv {
+  margin-right: 10px;
+  flex: 1;
+}
+.settings div.selectdiv select {
+  width: 100%;
+}
+.settings .selectdiv {
+  position: relative;
+  /*Don't really need this just for demo styling*/
+}
+.settings select::-ms-expand {
+  display: none;
+}
+.settings .selectdiv:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #7477bf;
+  right: 11px;
+  /*Adjust for position however you want*/
+  top: 20px;
+  padding: 0 0 2px;
+  /*left line */
+  position: absolute;
+  pointer-events: none;
+  text-shadow: 1px 1px 1px 1px black;
+}
+.settings .selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+}
+
 /* ==============Custom Switch=================== */
 .switch-ios.switch-light.custom-switch {
   margin: 1em;
