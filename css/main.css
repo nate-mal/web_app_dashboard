@@ -1481,13 +1481,15 @@ header .bell:hover {
 /* Notification-container style */
 .notification-container {
   height: 50px;
-  border-bottom: lightgray solid 0.6px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   margin-top: 5px;
+}
+.notification-container:not(:last-child) {
+  border-bottom: lightgray solid 0.6px;
 }
 .notification-container a {
   display: list-item;
@@ -1747,9 +1749,10 @@ header .bell:hover {
 .activity-text span {
   font-weight: 700;
 }
-.members-text a,
-.activity-text a {
+.members-text + a,
+.activity-text + a {
   color: initial;
+  font-size: 2em;
 }
 .members-text > *,
 .activity-text > * {

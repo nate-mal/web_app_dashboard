@@ -179,7 +179,9 @@ header {
 .notification-container {
   height: 50px;
   @extend %fix-font-size;
-  border-bottom: $border-style;
+  &:not(:last-child) {
+    border-bottom: $border-style;
+  }
   @include flexy() {
     justify-content: space-between;
     align-items: center;

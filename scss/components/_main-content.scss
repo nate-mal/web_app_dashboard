@@ -167,8 +167,9 @@ main {
     span {
       font-weight: 700;
     }
-    a {
+    & + a {
       color: initial;
+      font-size: 2em;
     }
     > * {
       margin: 0 10px;
