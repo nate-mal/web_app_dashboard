@@ -164,6 +164,12 @@ main {
     border-radius: 50%;
   }
   &-text {
+    span {
+      font-weight: 700;
+    }
+    a {
+      color: initial;
+    }
     > * {
       margin: 0 10px;
       text-align: center;

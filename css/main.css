@@ -1743,6 +1743,14 @@ header .bell:hover {
   height: auto;
   border-radius: 50%;
 }
+.members-text span,
+.activity-text span {
+  font-weight: 700;
+}
+.members-text a,
+.activity-text a {
+  color: initial;
+}
 .members-text > *,
 .activity-text > * {
   margin: 0 10px;
