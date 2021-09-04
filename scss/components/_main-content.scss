@@ -170,6 +170,10 @@ main {
     & + a {
       color: initial;
       font-size: 2em;
+      display: none;
+      @include mq("s") {
+        display: unset;
+      }
     }
     > * {
       margin: 0 10px;

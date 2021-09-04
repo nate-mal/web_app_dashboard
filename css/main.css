@@ -1793,6 +1793,13 @@ header .bell:hover {
 .activity-text + a {
   color: initial;
   font-size: 2em;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .members-text + a,
+.activity-text + a {
+    display: unset;
+  }
 }
 .members-text > *,
 .activity-text > * {
