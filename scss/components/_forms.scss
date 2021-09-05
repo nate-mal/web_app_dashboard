@@ -83,15 +83,12 @@
     /*left line */
     position: absolute;
     pointer-events: none;
-    //shadow effect//
-    text-shadow: 1px 1px 1px 1px black;
   }
 
   .selectdiv select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    /* Add some styling */
   }
 }
 

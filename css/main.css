@@ -1271,13 +1271,11 @@ h3 {
   /*left line */
   position: absolute;
   pointer-events: none;
-  text-shadow: 1px 1px 1px 1px black;
 }
 .settings .selectdiv select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  /* Add some styling */
 }
 
 /* ==============Custom Switch=================== */
