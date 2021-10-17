@@ -68,7 +68,7 @@ to complete</p>
 <p class="alert-banner-close">x</p>
 </div>
 `;
-$(alertBanner).hide().delay(600).slideDown();
+$(alertBanner).hide().delay(600). slideDown();
 
 alertBanner.addEventListener("click", (e) => {
   const element = e.target;
